@@ -1,77 +1,8 @@
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)
-
-Student Yatra
-
-Student Yatra is a full-stack platform for students with features like AI career advisor, face recognition login, skill tracker, job listings, certificates, interview preparation, and study groups.
-
-Features
-
-AI Career Advisor – Get personalized career guidance.
-
-Face Recognition Login & Registration – Secure authentication.
-
-Job Listings – Aggregated jobs from multiple sources.
-
-Skill Tracker & Certificates – Track and showcase skills and achievements.
-
-Interview Preparation – Practice questions and mock interviews.
-
-Study Groups – Connect with peers and collaborate.
-
-Screenshots:
-![Student Yatra Login Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/login%20page.png)
-![Student Yatra Dashboard Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/dashboard.png)
-![Student Yatra Study Group Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/study%20group.png)
-![Student Yatra Career Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/career%20advisor.png)
-![Student Yatra Job Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/job%20portal.png)
-![Student Yatra Interview Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/interview%20prep.png)
-![Student Yatra Face Register Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/face%20resgister.png)
-![Student Yatra Skills Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/skills.png)
-![Student Yatra Resume Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/Resume%20Builder.png)
-
-Technologies Used
-
-Frontend: React, Material-UI, Context API
-
-Backend: Django, Django REST Framework
-
-Database: PostgreSQL (or SQLite if you’re using default)
-
-AI Features: Python-based recommendation engine
-
-Authentication: JWT + Face Recognition
-
-
-Installation
-# Clone the repository
-git clone https://github.com/kh-bikash/student-yatra.git
-
-# Backend setup
-cd backend
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-
-# Frontend setup
-cd frontend
-npm install
-npm start
-
-Usage
-
-Sign up or log in
-
-Access dashboards, study groups, jobs, and AI career advice
-
-Track skills and certificates
-![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
 ![Django](https://img.shields.io/badge/Django-4.3-green.svg)
 ![React](https://img.shields.io/badge/React-18.2.0-blue.svg)
 ![Try Demo](https://img.shields.io/badge/Try%20Demo-Online-orange)
-
 # 🚀 Student Yatra
 
 **Student Yatra** is a **full-stack platform for students** with **AI-powered career guidance**, **face recognition login**, **skill tracker**, **job listings**, **certificates**, **interview preparation**, and **study groups**.  
