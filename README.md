@@ -48,7 +48,6 @@
 ---
 
 ## ⚡ Installation
-
 ```bash
 # Clone the repository
 git clone https://github.com/kh-bikash/student-yatra.git
@@ -65,7 +64,7 @@ python manage.py runserver
 cd frontend
 npm install
 npm start
-
+```
 🎮 Usage
 
 Sign up or log in
@@ -97,19 +96,3 @@ You can try the project online here: [Add your demo URL here]
 GitHub: kh-bikash
 
 Project Repository: Student Yatra
-
-
----
-
-✅ **Next steps:**  
-
-1. Replace `[Add your demo URL here]` with your live demo URL if you host it.  
-2. Save this as **README.md** in your repo.  
-3. Commit & push:  
-
-```bash
-git add README.md
-git commit -m "Revamped README with AGPLv3, badges, AI highlights, and screenshots"
-git push origin main
-
-
