@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Student Yatra
 
 Student Yatra is a full-stack platform for students with features like AI career advisor, face recognition login, skill tracker, job listings, certificates, interview preparation, and study groups.
