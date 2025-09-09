@@ -1,0 +1,203 @@
+Student Yatra - Project Setup & Development Guide
+Welcome to the Student Yatra project! This guide will walk you through setting up your development environment on Windows, structuring the project, and building the Minimum Viable Product (MVP).
+
+Project Goal: A holistic platform for students combining career guidance, skill development, resume building, and secure certificate management.
+
+Table of Contents
+Phase 1: The MVP
+
+Prerequisites
+
+Project Structure
+
+Backend Setup (Django)
+
+Frontend Setup (React)
+
+Database Setup (PostgreSQL)
+
+VS Code Configuration
+
+Next Steps: Building Your First Feature
+
+Phase 1: The MVP
+A project this large needs to be built in stages. Our first goal is to build a functional core.
+
+MVP Features:
+
+User Authentication: Secure user registration and login (JWT-based).
+
+Interactive Resume Builder: A form to create and fill out a resume.
+
+Basic Certificate Storage: Users can upload and view their certificates.
+
+Simple User Dashboard: A central page to navigate to other features.
+
+We will tackle advanced features like AI recommendations, facial recognition, and blockchain in later phases.
+
+Prerequisites
+Make sure you have the following software installed on your Windows machine:
+
+VS Code: Download VS Code
+
+Python: Download Python (Make sure to check "Add Python to PATH" during installation).
+
+Node.js & npm: Download Node.js
+
+PostgreSQL: Download PostgreSQL (During installation, remember the password you set for the postgres user).
+
+Project Structure
+We will use a monorepo structure, with the backend and frontend code in separate folders.
+
+student-yatra/
+├── backend/
+│   ├── venv/                   <-- Python virtual environment (auto-generated)
+│   ├── student_yatra/          <-- Django project folder
+│   ├── api/                    <-- Our Django app for API endpoints
+│   ├── manage.py
+│   └── requirements.txt
+│
+└── frontend/
+    ├── node_modules/           <-- Node modules (auto-generated)
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   └── App.js
+    └── package.json
+
+Backend Setup (Django)
+Create Project Directory:
+Open your terminal (Command Prompt or PowerShell) and create the main project folder.
+
+mkdir student-yatra
+cd student-yatra
+
+Set Up Virtual Environment:
+Create and activate a Python virtual environment inside the backend folder.
+
+mkdir backend
+cd backend
+python -m venv venv
+.\venv\Scripts\activate
+
+Your terminal prompt should now be prefixed with (venv).
+
+Install Django and Dependencies:
+Use pip to install the packages listed in requirements.txt.
+
+pip install -r requirements.txt
+
+Start Django Project:
+Create a new Django project. The . at the end is important—it creates the project in the current directory (backend).
+
+django-admin startproject student_yatra .
+
+Create an API App:
+Create a Django app to hold our API logic.
+
+python manage.py startapp api
+
+Configure settings.py:
+Open backend/student_yatra/settings.py in VS Code. You need to:
+
+Add 'rest_framework', 'api', and 'corsheaders' to INSTALLED_APPS.
+
+Add 'corsheaders.middleware.CorsMiddleware' to MIDDLEWARE.
+
+Add the REST_FRAMEWORK and CORS_ALLOWED_ORIGINS settings (see backend/student_yatra/settings.py file provided for reference).
+
+Update the DATABASES configuration with your PostgreSQL credentials.
+
+Run Database Migrations:
+This command creates the necessary tables in your database based on your Django apps.
+
+python manage.py migrate
+
+Run the Backend Server:
+
+python manage.py runserver
+
+Your Django development server will be running at http://127.0.0.1:8000/.
+
+Frontend Setup (React)
+Create React App:
+Open a new terminal. Navigate to the student-yatra root folder and run:
+
+mkdir frontend
+cd frontend
+npx create-react-app .
+
+This will set up a new React project in the frontend directory.
+
+Install Dependencies:
+We need axios for making API requests and react-router-dom for navigation.
+
+npm install axios react-router-dom tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+Configure Tailwind CSS:
+
+Open tailwind.config.js and configure the content array:
+
+content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
+Open src/index.css and add the Tailwind directives at the top:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Run the Frontend Server:
+
+npm start
+
+Your React development server will be running at http://localhost:3000/.
+
+🐘 Database Setup (PostgreSQL)
+Open psql:
+Search for "SQL Shell (psql)" in your Start Menu and open it. Press Enter to accept the defaults until it asks for the password for the user postgres. Enter the password you created during installation.
+
+Create Database:
+Create a new database for our project.
+
+CREATE DATABASE student_yatra;
+
+Create a User (Optional but Recommended):
+You can create a dedicated user for better security.
+
+CREATE USER yatra_admin WITH PASSWORD 'your_secure_password';
+GRANT ALL PRIVILEGES ON DATABASE student_yatra TO yatra_admin;
+
+Now, use these credentials in your Django settings.py file.
+
+🖥️ VS Code Configuration
+Recommended Extensions:
+Install these extensions for a better development experience:
+
+Python (by Microsoft)
+
+Django (by Baptiste Darthenay)
+
+ESLint
+
+Prettier - Code formatter
+
+Tailwind CSS IntelliSense
+
+Multi-root Workspace:
+For easy management, open the main student-yatra folder in VS Code, then go to File > Add Folder to Workspace... and add both the backend and frontend folders. Now you can easily switch between them.
+
+Next Steps: Building Your First Feature
+With the setup complete, you are ready to start coding!
+
+Implement User Authentication:
+
+Backend: Create a User model, serializer, and API views for registration and login (using Simple-JWT).
+
+Frontend: Create Login and Register pages and forms that send requests to your backend API.
+
+Connect Frontend to Backend:
+Use axios in your React components to fetch data from and send data to your Django API. Remember that the backend is at http://localhost:8000.
+
+Good luck!
