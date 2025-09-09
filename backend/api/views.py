@@ -233,7 +233,7 @@ class CareerGuidanceView(APIView):
         # Configure the Gemini API using the key from settings.py
         try:
             # This is the proper way to access the key
-            api_key = settings.GEMINI_API_KEY
+            api_key = getattr(settings, "GEMINI_API_KEY", None)
             if not api_key or api_key == 'YOUR_GEMINI_API_KEY':
                  return Response({"error": "AI service is not configured on the server."}, status=500)
             
