@@ -7,3 +7,4 @@
 ![Student Yatra Interview Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/interview%20prep.png)
 ![Student Yatra Face Register Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/face%20resgister.png)
 ![Student Yatra Skills Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/skills.png)
+![Student Yatra Resume Page](https://github.com/kh-bikash/student-yatra/blob/main/screenshots/Resume%20Builder.png)
