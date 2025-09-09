@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)
 
 Student Yatra
 
