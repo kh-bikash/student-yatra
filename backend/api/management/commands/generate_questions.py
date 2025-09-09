@@ -1,11 +1,13 @@
 import google.generativeai as genai
 import json
+import os
 from django.core.management.base import BaseCommand
 from api.models import Skill, InterviewQuestion
-
+from dotenv import load_dotenv
 # --- IMPORTANT ---
 # Replace 'YOUR_GEMINI_API_KEY' with the actual key you got from Google AI Studio.
-GEMINI_API_KEY = 'AIzaSyAhYXTljEnPdacmekNgtUQGWysS63I9Fio'
+load_dotenv()
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 class Command(BaseCommand):
     help = 'Generates interview questions for existing skills using the Gemini API'
