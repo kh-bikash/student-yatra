@@ -79,8 +79,8 @@ This project is licensed under the GNU Affero General Public License v3.0 (AGPLv
 
 ⚠️ Important: You may not use this project to create a derivative work that is closed-source or proprietary.
 
-See the LICENSE
- file for full details.
+See the [LICENSE](./LICENSE) file for full details.
+
 
 🤝 Contribution
 
@@ -93,6 +93,7 @@ You can try the project online here: [Add your demo URL here]
 
 📌 Contact
 
-GitHub: kh-bikash
+GitHub: [kh-bikash](https://github.com/kh-bikash)
 
-Project Repository: Student Yatra
+Project Repository: [Student Yatra](https://github.com/kh-bikash/student-yatra)
+
