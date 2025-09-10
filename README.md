@@ -87,9 +87,6 @@ See the [LICENSE](./LICENSE) file for full details.
 Contributions are welcome!
 Please fork the repository and create a pull request.
 
-🌐 Try Online Demo
-
-You can try the project online here: [Add your demo URL here]
 
 📌 Contact
 
